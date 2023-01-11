@@ -1,8 +1,9 @@
 import { useNavigation } from '@react-navigation/native'
 import { StatusBar } from 'expo-status-bar';
 import React, { useLayoutEffect } from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, Image } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context';
+import AppScreen from '../components/AppScreen';
 
 const HomeScreen = () => {
     const navigation = useNavigation();
@@ -15,10 +16,9 @@ const HomeScreen = () => {
     }, [])
     
     return (
-        <SafeAreaView>
-            <StatusBar />
-            <Text className='text-red-500 text-lgr'>HomeScreen</Text>
-        </SafeAreaView>
+        <AppScreen>
+            <Text className='text-red-500'>Home</Text>
+        </AppScreen>
     )
 }
 
